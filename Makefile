@@ -1,10 +1,10 @@
 all: MyricaMonospace\ Nerd\ Font.ttc
 
-install: MyricaMonospace\ Nerd\ Font.ttc: Myrica.TTC
-	open $^
+install: MyricaMonospace\ Nerd\ Font.ttc
+	open "$^"
 
 MyricaMonospace\ Nerd\ Font.ttc: Myrica.TTC
-	fontforge -script fp/font-patcher $^
+	fontforge -script fp/font-patcher -c $^
 
 Myrica.TTC: Myrica.7z
 	7z e $^
