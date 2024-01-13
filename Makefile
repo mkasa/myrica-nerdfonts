@@ -1,4 +1,13 @@
-all: MyricaMonospace\ Nerd\ Font.ttc
+all:
+	echo "This script works only for macOS. wget must be installed."
+	echo ""
+    echo "Usage:"
+	echo "    make pre              (install 7zip and fontforge using Homebrew)"
+	echo "    make install          (download Myrica, patch it with Font Nerds, install the patched font)
+
+
+pre:
+	brew install p7zip fontforge
 
 install: MyricaMonospace\ Nerd\ Font.ttc
 	open "$^"
